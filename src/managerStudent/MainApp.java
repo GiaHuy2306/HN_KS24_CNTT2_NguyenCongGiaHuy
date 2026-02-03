@@ -69,12 +69,17 @@ public class MainApp {
                 case 4: {
                     for (int i = 0; i < students.size(); i++) {
                         for (int j = 0; j < students.size(); j++) {
-                            if (students.get(i).equals(students.get(j))) {}
+                            if (students.get(i).getScore() > (students.get(j).getScore())) {
+                                Student tempStudent = students.get(i);
+                                students.set(i, students.get(j));
+                                students.set(j, tempStudent);
+                            }
                         }
                     }
                     break;
                 }
                 case 5: {
+                    System.out.print("Bạn đã thoát chương trình");
                     break;
                 }
                 default: {
